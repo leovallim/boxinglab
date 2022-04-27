@@ -41,7 +41,8 @@
                         "4": "Lista de serviços",
                         "5": "Vídeo",
                         "6": "Contato",
-                        "7": "Depoimentos"
+                        "7": "Depoimentos",
+                        "8": "Vídeo inicial"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -820,6 +821,112 @@
                             "maxlength": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_626942fad2847",
+                    "label": "Vídeo inicial",
+                    "name": "block_init",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62694325d2848",
+                            "label": "Chamada inicial",
+                            "name": "block_init_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62694345d2849",
+                            "label": "Subtítulo",
+                            "name": "block_init_subtitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62694352d284a",
+                            "label": "Imagem de fundo (tela grande)",
+                            "name": "block_init_bg",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_62694363d284b",
+                            "label": "Vídeo",
+                            "name": "block_init_video",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6242df908abcd",
+                                        "operator": "==",
+                                        "value": "8"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "mp4,m4v,mov,avi,wmv,mkv,webm"
+                        }
+                    ]
                 }
             ]
         }
@@ -851,5 +958,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649884650
+    "modified": 1651068799
 }

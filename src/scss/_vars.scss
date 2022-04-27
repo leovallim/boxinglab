@@ -6,8 +6,8 @@ $genera-shadown : 0 10px 20px rgba(0,0,0,.15);
 
 // Colors
 
-$color-primary : #01B7B1;
-$color-secoundary : #999999;
+$color-primary : #1b1b1b;
+$color-secoundary : #777777;
 
 //Fonts
 
@@ -32,7 +32,7 @@ $font-size-h6 : 0.75rem;
 //Buttons
 
 $button-color-bg : $color-primary;
-$button-color-bg-hover : #CDD322;
+$button-color-bg-hover : $color-secoundary;
 $button-color-dark-bg : #ffffff;
 $button-color-dark-bg-hover : #eaeaea;
 $button-color-text : #ffffff;
@@ -45,20 +45,20 @@ $button-icon-size : 1.15rem;
 
 //Header
 
-$header-bg : #fafafa;
-$header-height: 80px;
+$header-bg : $color-primary;
+$header-height: 100px;
 $header-shadown: 0px 5px 10px rgba(0,0,0,0.05);
-$header-text : #1b1b1b;
-$header-content-bg : #ffffff;
+$header-text : #fafafa;
+$header-content-bg : $color-primary;
 $header-content-bg-shadown : 0 5px 10px rgba(0, 0, 0, .05);
-$header-control-color : $color-primary;
-$header-control-color-hover : #CDD322;
-$header-control-color-close : $color-primary;
-$header-cta-bg : $color-primary;
-$header-cta-text : #ffffff;
+$header-control-color : #fafafa;
+$header-control-color-hover : #ffffff;
+$header-control-color-close : #ffffff;
+$header-cta-bg : #ffffff;
+$header-cta-text : $color-primary;
 $header-cta-bg-hover : #CDD322;
-$header-nav-text : $color-primary;
-$header-social-color : $color-primary;
+$header-nav-text : #ffffff;
+$header-social-color : #CDD322;
 
 //Services
 $services-bg: $color-primary;
