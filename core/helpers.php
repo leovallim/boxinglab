@@ -276,15 +276,25 @@ function ht_format_text($args, $index){
                 
                 echo "<div class=\"column content__image {$order[1]}\">";
                     echo '<div class="swiper content__image__box">';
-                        echo '<div class="swiper-wrapper">';
-                            foreach($content['block_content_image'] as $image){
-                                echo '<div class="swiper-slide content__image__slide">';
-                                    echo "<a href=\"{$image['url']}\" class=\"content__image__item\">";
-                                        echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
-                                    echo '</a>';
-                                echo '</div>';
-                            }
-                        echo '</div>';
+                        if(count($content['block_content_image']) == 1){
+                            $image = $content['block_content_image'][0];
+
+                            echo '<div class="content__image__slide">';
+                                echo "<a href=\"{$image['url']}\" class=\"content__image__item\">";
+                                    echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
+                                echo '</a>';
+                            echo '</div>';
+                        }else{
+                            echo '<div class="swiper-wrapper">';
+                                foreach($content['block_content_image'] as $image){
+                                    echo '<div class="swiper-slide content__image__slide">';
+                                        echo "<a href=\"{$image['url']}\" class=\"content__image__item\">";
+                                            echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
+                                        echo '</a>';
+                                    echo '</div>';
+                                }
+                            echo '</div>';
+                        }
 
                     echo '</div>';
                     echo '<div class="swiper-pagination"></div>';
@@ -501,6 +511,9 @@ function ht_format_content($args, $index){
             break;
         case 8: 
             get_template_part( 'template-parts/home', 'video', $args );
+            break;
+        case 9: 
+            echo '<div class="separator">&nbsp;</div>';
             break;
     }
 }

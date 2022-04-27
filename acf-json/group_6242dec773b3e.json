@@ -42,7 +42,8 @@
                         "5": "Vídeo",
                         "6": "Contato",
                         "7": "Depoimentos",
-                        "8": "Vídeo inicial"
+                        "8": "Vídeo inicial",
+                        "9": "Separador"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -829,7 +830,15 @@
                     "type": "group",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6242df908abcd",
+                                "operator": "==",
+                                "value": "8"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -958,5 +967,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651068799
+    "modified": 1651084924
 }
