@@ -207,12 +207,18 @@ function ht_format_gallery($args, $index){
             if($content['block_gallery_images']){
                 echo '<ul class="gallery__list">';
 
+                    $i = 0;
                     foreach($content['block_gallery_images'] as $image){
-                        echo '<li class="gallery__item">';
+                        echo '<li class="gallery__item';
+                        if($i > 5){
+                            echo ' gallery__item--hide';
+                        }
+                        echo '">';
                             echo "<a href=\"{$image['url']}\" class=\"gallery__item__link\">";
-                                echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\" class=\"gallery__item__image\">";
+                                echo "<img src=\"{$image['sizes']['medium']}\" alt=\"{$image['alt']}\" class=\"gallery__item__image\">";
                             echo '</a>';
                         echo '</li>';
+                        $i++;
                     }
     
                 echo '</ul>';
@@ -434,6 +440,15 @@ function ht_format_contact($args, $index){
                     echo '</ul>';
             echo '</div>';
         }
+        if(!empty( $contact['address'] )){
+            echo '<div class="contact__item contact__item--address">';
+                
+                    echo '<h3 class="title title--dark contact__title--phone">Endereço</h3>';
+                    echo '<p class="contact__item"><i class="fa-solid fa-location-dot"></i> ';
+                        echo $contact['address'];
+                    echo '</p>';
+            echo '</div>';
+        }
 
         if(!empty( $contact['whatsapp']['number'] ) ){
             echo '<div class="contact__item contact__item--phone">';
@@ -510,10 +525,13 @@ function ht_format_content($args, $index){
             ht_format_testimonial($args, $index);
             break;
         case 8: 
-            get_template_part( 'template-parts/home', 'video', $args );
+            get_template_part( 'template-parts/page', 'video', $args );
             break;
         case 9: 
             echo '<div class="separator">&nbsp;</div>';
+            break;
+        case 10: 
+            get_template_part( 'template-parts/page', 'table', $args );
             break;
     }
 }

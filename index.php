@@ -1,4 +1,4 @@
 <?php 
 get_header();
-get_template_part('template-parts/global', 'post');
+ht_content();
 get_footer();

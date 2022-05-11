@@ -43,7 +43,8 @@
                         "6": "Contato",
                         "7": "Depoimentos",
                         "8": "Vídeo inicial",
-                        "9": "Separador"
+                        "9": "Separador",
+                        "10": "Tabela"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -936,6 +937,106 @@
                             "mime_types": "mp4,m4v,mov,avi,wmv,mkv,webm"
                         }
                     ]
+                },
+                {
+                    "key": "field_6269a1ea0a34a",
+                    "label": "Tabela",
+                    "name": "block_table",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6242df908abcd",
+                                "operator": "==",
+                                "value": "10"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6269a7651b61a",
+                            "label": "Título",
+                            "name": "block_tables_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6269a40d0a34b",
+                            "label": "Itens",
+                            "name": "block_tables_items",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6269a42e0a34c",
+                                    "label": "Título",
+                                    "name": "block_table_item_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6269a4440a34d",
+                                    "label": "Tabela",
+                                    "name": "block_table_item_table",
+                                    "type": "table",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "use_header": 0,
+                                    "use_caption": 2
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
@@ -967,5 +1068,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1651084924
+    "modified": 1651091314
 }

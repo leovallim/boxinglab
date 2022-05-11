@@ -29,7 +29,7 @@
     }
     &__item::after{
         position: absolute;
-        display: block;
+        display: flex;
         content: ' ';
         pointer-events: none;
         background-color: rgba(0,0,0,0.5);
@@ -40,9 +40,26 @@
         z-index: 100;
         top:0;
         left: 0;
+        justify-content: center;
+        align-items: center;
+
+        color: #ffffff;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+
+        @include screen(medium){
+            font-size: 1.2rem;
+        }
+    }
+    &__item:nth-child(6)::after{
+        opacity: 1;
+        content: 'Veja mais';
     }
     &__item:hover::after{
         opacity: 1;
+    }
+    &__item--hide{
+        display: none;
     }
     &__item__image{
         position: relative;

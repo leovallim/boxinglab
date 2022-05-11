@@ -59,7 +59,7 @@
                 <ul class="header__nav__list">
                     <?php foreach($args['nav'] as $nav): ?>
                         <li class="header__nav__item">
-                            <a href="<?= $nav['ht_header_nav_item']['url'] ?>" class="header__nav__link" target="<?= $nav['ht_header_nav_item']['target'] ?? '_self' ?>"><?= $nav['ht_header_nav_item']['title'] ?></a>
+                            <a href="<?= $nav['ht_header_nav_item']['url'] ?>" data-action="menu" class="header__nav__link" target="<?= $nav['ht_header_nav_item']['target'] ?? '_self' ?>"><?= $nav['ht_header_nav_item']['title'] ?></a>
                         </li>
                     <?php endforeach; ?>
                     <?php 
