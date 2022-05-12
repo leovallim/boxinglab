@@ -13,7 +13,7 @@
                 if($args['logo'] === null):
                     bloginfo( 'name' );
                 else:
-                    ?><img src="<?= $args['logo']['url'] ?>" alt="<?= $args['logo']['alt'] ?>" class="footer__branding__image"><?php
+                    ?><img data-src="<?= $args['logo']['url'] ?>" alt="<?= $args['logo']['alt'] ?>" class="footer__branding__image"><?php
                 endif;
                 ?>
             </a>
@@ -72,7 +72,7 @@
         <div class="footer__developer">
             <a href="https://htcomunicacao.com.br" target="_blank" class="footer__developer__link">
                 <span class="footer__developer__text">Desenvolvido por</span> 
-                <img src="<?= get_template_directory_uri() ?>/dist/images/logo-ht-comunicacao.png" class="footer__developer__image" alt="Desenvolvido por HT Comunicação">
+                <img data-src="<?= get_template_directory_uri() ?>/dist/images/logo-ht-comunicacao.png" class="footer__developer__image" alt="Desenvolvido por HT Comunicação">
             </a>
         </div>
     </div>
