@@ -181,8 +181,8 @@ function ht_format_hero($args, $index){
                 echo '<div class="swiper-slide">';
                     $target = $hero['block_hero_link']['target'] ?? '_self';
                     echo "<a href=\"{$hero['block_hero_link']['url']}\" target=\"{$target}\">";
-                        echo "<div class=\"hero__slide--large\"><img src=\"{$hero['block_hero_image_desktop']['url']}\" alt=\"{$hero['block_hero_image_desktop']['alt']}\"></div>";
-                        echo "<div class=\"hero__slide--small\"><img src=\"{$hero['block_hero_image_mobile']['url']}\" alt=\"{$hero['block_hero_image_mobile']['alt']}\"></div>";
+                        echo "<div class=\"hero__slide--large\"><img data-src=\"{$hero['block_hero_image_desktop']['url']}\" alt=\"{$hero['block_hero_image_desktop']['alt']}\"></div>";
+                        echo "<div class=\"hero__slide--small\"><img data-src=\"{$hero['block_hero_image_mobile']['url']}\" alt=\"{$hero['block_hero_image_mobile']['alt']}\"></div>";
                     echo '</a>';
                 echo '</div>';
             }
@@ -215,7 +215,7 @@ function ht_format_gallery($args, $index){
                         }
                         echo '">';
                             echo "<a href=\"{$image['url']}\" class=\"gallery__item__link\">";
-                                echo "<img src=\"{$image['sizes']['medium']}\" alt=\"{$image['alt']}\" class=\"gallery__item__image\">";
+                                echo "<img data-src=\"{$image['sizes']['medium']}\" alt=\"{$image['alt']}\" class=\"gallery__item__image\">";
                             echo '</a>';
                         echo '</li>';
                         $i++;
@@ -287,7 +287,7 @@ function ht_format_text($args, $index){
 
                             echo '<div class="content__image__slide">';
                                 echo "<a href=\"{$image['url']}\" class=\"content__image__item\">";
-                                    echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
+                                    echo "<img data-src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
                                 echo '</a>';
                             echo '</div>';
                         }else{
@@ -295,7 +295,7 @@ function ht_format_text($args, $index){
                                 foreach($content['block_content_image'] as $image){
                                     echo '<div class="swiper-slide content__image__slide">';
                                         echo "<a href=\"{$image['url']}\" class=\"content__image__item\">";
-                                            echo "<img src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
+                                            echo "<img data-src=\"{$image['url']}\" alt=\"{$image['alt']}\">";
                                         echo '</a>';
                                     echo '</div>';
                                 }
@@ -338,7 +338,7 @@ function ht_format_services($args, $index){
                         echo '<div class="services__item">';
                             if($item['block_services_list_item_icon']){
                                 echo '<div class="services__item__icon">';
-                                    echo "<img src=\"{$item['block_services_list_item_icon']['url']}\" alt=\"{$item['block_services_list_item_icon']['alt']}\" class=\"services__item__icon__image\">";
+                                    echo "<img data-src=\"{$item['block_services_list_item_icon']['url']}\" alt=\"{$item['block_services_list_item_icon']['alt']}\" class=\"services__item__icon__image\">";
                                 echo '</div>';
                             }
                             if($item['block_services_list_item_title']){
@@ -411,7 +411,7 @@ function ht_format_contact($args, $index){
     }
     if($content['block_contact_show_map'] == 2){
         echo '<div class="map__item map__item--map">';
-            echo "<img src=\"{$content['block_contact_image']['url']}\" alt=\"{$content['block_contact_image']['alt']}\" class=\"map__image\">";
+            echo "<img data-src=\"{$content['block_contact_image']['url']}\" alt=\"{$content['block_contact_image']['alt']}\" class=\"map__image\">";
         echo '</div>';
 
     }
